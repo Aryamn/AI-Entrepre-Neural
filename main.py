@@ -84,14 +84,15 @@ def predict():
     # print(all_features)
     # print(int_features)
     # qchat10 = loaded_model.predict_proba([int_features])[0][0]
+    vf = predict_vf(filepath)[0]
     qchat10 = predict_q10([int_features])[0][0]
     # print(int_features)
     # int_features.insert(0,all_features[4])
     # print(int_features)
-    vf = predict_vf(filepath)[0]
-    print(vf)
-    print(qchat10)
-
+    
+    # print(vf)
+    # print(qchat10)
+    os.remove(filepath)
     # final_features = [np.array(int_features)]
     # prediction = model.predict(final_features)
     
@@ -112,7 +113,8 @@ def results():
     # return jsonify(output)
     return jsonify(data)
 
-
+if __name__ == "__main__":
+    app.run(debug=True)
 # threading.Thread(target=app.run, kwargs={'host':'172.28.0.2', 'port':6000}).start()
 # app.run(debug=True, use_reloader=False, host='127.0.0.1', port=6000)
     # app.run(debug=True)
