@@ -24,7 +24,7 @@ app = Flask(__name__)
 # model = pickle.load(open('/content/drive/MyDrive/model.pkl', 'rb'))
 
 app.config['SECRET_KEY'] = 'thisisasecret'
-app.config['UPLOADED_IMAGES_DEST'] = 'static/uploads/images'
+app.config['UPLOADED_IMAGES_DEST'] = 'uploads/images'
 
 images = UploadSet('images', IMAGES)
 configure_uploads(app, images)
