@@ -112,8 +112,7 @@ def results():
     # return jsonify(output)
     return jsonify(data)
 
-if __name__ == "__main__":
-    app.run()
+
 # threading.Thread(target=app.run, kwargs={'host':'172.28.0.2', 'port':6000}).start()
 # app.run(debug=True, use_reloader=False, host='127.0.0.1', port=6000)
     # app.run(debug=True)
